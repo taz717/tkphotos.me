@@ -5,12 +5,68 @@ header {
 
 body,html {
     margin: 0;
+    padding-top: 0;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 150px;
     font: bold 14px/1.4 'Open Sans', arial, sans-serif;
     background: #000;
     text-align: center;
 }
 
-h1 {
+.container {
+  padding: 20px;
+  justify-content: center;
+  text-align: center;
+  background-image: url("cover.jpg");
+  /* border-radius: 15px; */
+}
+
+.container2 {
+    padding: 20px;
+    min-height: 200px;
+    width: auto;
+  justify-content: center;
+  text-align: center;
+  background-color: palevioletred;
+  /* border-radius: 15px; */
+}
+
+.container3 {
+    padding: 20px;
+    min-height: 200px;
+    width: auto;
+  justify-content: center;
+  text-align: center;
+  background-color: paleturquoise;
+  /* border-radius: 15px; */
+}
+
+.image-container {
+  background-image: url("cover.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  min-height: 300px; /* You must set a specified height */
+    background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding: 50px;
+  justify-content: center;
+  text-align: center;
+  color: aliceblue;
+  text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+}
+
+.container-container {
+  padding: 0;
+  /* text-align: center; */
+    display: flex;
+  /* background: white; */
+  /* border-radius: 15px; */
+}
+
+h1.logo {
     margin-top: 50px;
     color: #fff;
     text-transform: uppercase;
@@ -25,13 +81,13 @@ ul {
     display: table;
     width: 600px;
     text-align: center;
-  }
-  li { 
+}
+li { 
     display: table-cell; 
     position: relative; 
     padding: 15px 0;
-  }
-  a {
+}
+a {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
@@ -40,8 +96,8 @@ ul {
     display: inline-block;
     padding: 15px 10px;
     position: relative;
-  }
-  a:after {    
+}
+a:after {    
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -53,17 +109,23 @@ ul {
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
-  a:hover:after { 
+a:hover:after { 
     width: 100%; 
     left: 0; 
-  }
-  @media screen and (max-height: 300px) {
-      ul {
+}
+@media screen and (max-height: 300px) {
+    body {
+      padding: 15px;
+    }
+    ul {
           margin-top: 40px;
-      }
-  }
+    }
+}
 
 @media screen and (max-width: 600px) {
+    body {
+        padding: 15px;
+      }
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -72,6 +134,9 @@ ul {
 }
   
 @media screen and (max-width: 600px) {
+    body {
+        padding: 15px;
+      }
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
