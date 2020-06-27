@@ -108,21 +108,22 @@ $(document).ready(function () {
     
     //*************** Isotope filter
 
-    var $Container = $('#img-filter');
+	var $Container = $('#img-filter');
     if( $Container.length>0 ) {
         $Container.isotope({
             itemSelector: '.single-port',
-            transitionDuration: '0.8s'
-        });
-        $(".img-filter").on("click", function (e){
+			transitionDuration: '0.8s'
+		});
+
+        $(".img-filter").on("click", function (e) {
             $(".img-filter.active").removeClass("active");
-            $(this).addClass("active");
+			$(this).addClass("active");
             var selector = $(this).attr('data-filter');
             $Container.isotope({
                 filter: selector
             });
             return false;
-        });
+		});
 
         $(window).resize(function(){
             setTimeout(function(){
@@ -168,3 +169,24 @@ $(document).ready(function () {
 
 
 });
+
+function checkContainer () {
+	// console.log('checking port-nav container');
+	
+	if ( $('.port-nav').is(':visible')) {
+		// console.log("port-nav is visible");
+		var $Container = $('#img-filter');
+		if( $Container.length>0 ) {
+			$Container.isotope({
+				itemSelector: '.single-port',
+				transitionDuration: '0.8s'
+			});
+		}
+
+		$Container.isotope({
+			filter: $(".img-filter.active").attr("data-filter")
+		})
+	}
+}
+
+$(document).ready(checkContainer)
