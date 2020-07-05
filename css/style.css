@@ -534,7 +534,9 @@ canvas {
 .overlay .overlay-inner {
 	position: absolute;
 	top: 35%;
-	width: 100%;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
 	text-align: center;
 }
 .overlay .overlay-inner h4 {
