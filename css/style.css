@@ -478,11 +478,20 @@ canvas {
     clear: both;
 }
 @media screen and (max-width: 600px) {
+.p {
+width: 60%;
+text-align: center !important;
+}
+.row:after {
+    text-align: center !important;
+}
+/* @media screen and (max-width: 600px) {
     .column {
         width: 60%;
-        text-align: center;
+        float: center;
+        text-align: center !important;
     }
-}
+} */
 /*=================
     7. SERVICE
 ===================*/
