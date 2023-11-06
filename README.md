@@ -1,3 +1,3 @@
 # tkphotos.me
 
-Check out the current deployment at [tkphotosme.netlify.app](https://tkphotos.netlify.app/)
+Check out the current deployment at [tkphotosme](https://taz717.github.io/tkphotos.me/)
